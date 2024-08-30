@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Canteen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #343a40;
+        }
+        .food-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .food-item img {
+            max-width: 100px;
+            border-radius: 5px;
+        }
+        .food-item .details {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+        .food-item button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .food-item button:hover {
+            background-color: #218838;
+        }
+        .why-shop-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .why-shop-text {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .why-shop-image {
+            flex: 0 0 40%;
+        }
+        .why-shop-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="backtohomeimage" href="index.html">
+            <img src="Logo.png" width="200" alt="Canteen Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="food ordering.html">Menu</a></li>
+                <li><a href="checkout.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="why-shop">
+            <h2>Why Choose The Canteen?</h2>
+            <div class="why-shop-container">
+                <div class="why-shop-text">
+                    <p>At The Canteen, we are dedicated to providing delicious and nutritious meals to students. Here’s why you should choose us:</p>
+                    <ul>
+                        <li>Variety of Choices: We offer a diverse menu featuring a wide range of options, from hearty cheeseburgers and crispy fries to tasty pizzas and savory hotdogs.</li>
+                        <li>Affordable Prices: Enjoy quality meals at prices that fit within your budget, ensuring that you can have a great lunch without breaking the bank.</li>
+                        <li>Fresh Ingredients: We use only the freshest ingredients in our meals, so you can enjoy delicious and healthy food every day.</li>
+                        <li>Convenient Ordering: Our easy-to-use ordering system allows you to quickly select and pay for your meals, making lunchtime hassle-free.</li>
+                    </ul>
+                    <p>At The Canteen, we care about every student’s dining experience, and we’re committed to providing exceptional service and high-quality meals. Here’s how we ensure your satisfaction:</p>
+                    <ul>
+                        <li>Friendly Staff: Our approachable staff is always ready to assist you with any questions or special requests, ensuring a pleasant dining experience.</li>
+                        <li>Hygiene and Safety: We adhere to strict hygiene and safety standards to guarantee that your food is prepared and served in a clean and safe environment.</li>
+                        <li>Engaging Community: We foster a sense of community through special events and promotions, making lunchtime an enjoyable part of your day.</li>
+                        <li>Continuous Improvement: We listen to your feedback and strive to enhance our menu and services to better meet your needs and preferences.</li>
+                    </ul>
+                </div>
+                <div class="why-shop-image">
+                    <img src="Untitled design (13).png" alt="Canteen Image">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Canteen Ordering System. All rights reserved.</p>
+    </footer>
+    <script src="cart-functions.js"></script>
+</body>
+</html>

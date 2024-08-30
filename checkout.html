@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Canteen Ordering System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        .cart-item p {
+            margin: 0;
+        }
+        .cart-item button {
+            background-color: #ff4d4d;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .cart-item button:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="backtohomeimage" href="index.html">
+            <img src="Logo.png" width="200" alt="Canteen Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="food ordering.html">Menu</a></li>
+                <li><a href="checkout.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Order Summary</h1>
+        <div id="cart-items" class="container">
+            <!-- Cart items will be dynamically displayed here -->
+        </div>
+        <h3 id="total-price">Your total price comes to: </h3>
+        <div class="container">
+            <h2>Payment Details</h2>
+            <form action="aftercheckoutpage.html" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
+                <label for="address">Pickup Location:</label>
+                <input type="text" id="address" name="address" placeholder="Select your pickup location" required>
+    
+                <label for="city">Pickup Time:</label>
+                <input type="text" id="city" name="city" placeholder="Choose your pickup time" required>
+    
+                <input type="submit" value="Place Order">
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        © 2024 Canteen Ordering System. All rights reserved.
+    </footer>
+    <script src="cart-functions.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            displayCart(); // Display cart items when page loads
+            displayTotalPrice(); // Display total price when page loads
+        });
+    </script>
+</body>
+</html>
